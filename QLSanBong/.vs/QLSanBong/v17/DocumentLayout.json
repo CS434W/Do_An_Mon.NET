@@ -1,0 +1,126 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\nam_4\\.net\\doan\\QLSanBong\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|d:\\nam_4\\.net\\doan\\qlsanbong\\qlsanbong\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|solutionrelative:qlsanbong\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|D:\\nam_4\\.net\\doan\\QLSanBong\\qlsanbong\\dangnhap.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|solutionrelative:qlsanbong\\dangnhap.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|D:\\nam_4\\.net\\doan\\QLSanBong\\qlsanbong\\quanlikhachhang.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|solutionrelative:qlsanbong\\quanlikhachhang.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|D:\\nam_4\\.net\\doan\\QLSanBong\\qlsanbong\\quanlinguoidung.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|solutionrelative:qlsanbong\\quanlinguoidung.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|D:\\nam_4\\.net\\doan\\QLSanBong\\qlsanbong\\dangki.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|solutionrelative:qlsanbong\\dangki.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|D:\\nam_4\\.net\\doan\\QLSanBong\\qlsanbong\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|solutionrelative:qlsanbong\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "dangnhap.xaml",
+              "DocumentMoniker": "D:\\nam_4\\.net\\doan\\QLSanBong\\QLSanBong\\dangnhap.xaml",
+              "RelativeDocumentMoniker": "QLSanBong\\dangnhap.xaml",
+              "ToolTip": "D:\\nam_4\\.net\\doan\\QLSanBong\\QLSanBong\\dangnhap.xaml",
+              "RelativeToolTip": "QLSanBong\\dangnhap.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-15T16:20:49.515Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\nam_4\\.net\\doan\\QLSanBong\\QLSanBong\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "QLSanBong\\MainWindow.xaml",
+              "ToolTip": "D:\\nam_4\\.net\\doan\\QLSanBong\\QLSanBong\\MainWindow.xaml",
+              "RelativeToolTip": "QLSanBong\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-15T16:17:59.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "QuanLiKhachHang.xaml",
+              "DocumentMoniker": "D:\\nam_4\\.net\\doan\\QLSanBong\\QLSanBong\\QuanLiKhachHang.xaml",
+              "RelativeDocumentMoniker": "QLSanBong\\QuanLiKhachHang.xaml",
+              "ToolTip": "D:\\nam_4\\.net\\doan\\QLSanBong\\QLSanBong\\QuanLiKhachHang.xaml",
+              "RelativeToolTip": "QLSanBong\\QuanLiKhachHang.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-15T16:23:22.696Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "dangki.xaml",
+              "DocumentMoniker": "D:\\nam_4\\.net\\doan\\QLSanBong\\QLSanBong\\dangki.xaml",
+              "RelativeDocumentMoniker": "QLSanBong\\dangki.xaml",
+              "ToolTip": "D:\\nam_4\\.net\\doan\\QLSanBong\\QLSanBong\\dangki.xaml",
+              "RelativeToolTip": "QLSanBong\\dangki.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-15T16:20:35.274Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "QuanLiNguoiDung.xaml",
+              "DocumentMoniker": "D:\\nam_4\\.net\\doan\\QLSanBong\\QLSanBong\\QuanLiNguoiDung.xaml",
+              "RelativeDocumentMoniker": "QLSanBong\\QuanLiNguoiDung.xaml",
+              "ToolTip": "D:\\nam_4\\.net\\doan\\QLSanBong\\QLSanBong\\QuanLiNguoiDung.xaml",
+              "RelativeToolTip": "QLSanBong\\QuanLiNguoiDung.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-15T16:19:40.512Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\nam_4\\.net\\doan\\QLSanBong\\QLSanBong\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "QLSanBong\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\nam_4\\.net\\doan\\QLSanBong\\QLSanBong\\MainWindow.xaml.cs",
+              "RelativeToolTip": "QLSanBong\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T16:17:59.354Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 63,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
