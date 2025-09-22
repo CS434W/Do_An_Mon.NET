@@ -1,0 +1,23 @@
+﻿# Build folders
+bin/
+obj/
+
+# Visual Studio cache
+.vs/
+*.user
+*.suo
+
+# Debug/Release
+*.pdb
+*.exe
+*.dll
+*.cache
+*.log
+*.dbmdl
+
+# Others
+*.zip
+*.7z
+*.gz
+*.tar
+*.rar
