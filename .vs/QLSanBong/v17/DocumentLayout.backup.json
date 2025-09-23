@@ -1,26 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\NITRO 5\\source\\repos\\Do_An_Mon.NET\\QLSanBong\\",
+  "WorkspaceRootPath": "D:\\nam_4\\net\\Do_An_Mon.NET\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|c:\\users\\nitro 5\\source\\repos\\do_an_mon.net\\qlsanbong\\qlsanbong\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|solutionrelative:qlsanbong\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|d:\\nam_4\\net\\do_an_mon.net\\qlsanbong\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|solutionrelative:qlsanbong\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|c:\\users\\nitro 5\\source\\repos\\do_an_mon.net\\qlsanbong\\qlsanbong\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|solutionrelative:qlsanbong\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|D:\\nam_4\\net\\Do_An_Mon.NET\\qlsanbong\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|solutionrelative:qlsanbong\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|C:\\Users\\NITRO 5\\source\\repos\\Do_An_Mon.NET\\QLSanBong\\qlsanbong\\quanlikhachhang.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|d:\\nam_4\\net\\do_an_mon.net\\qlsanbong\\model1.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|solutionrelative:qlsanbong\\model1.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|D:\\nam_4\\net\\Do_An_Mon.NET\\qlsanbong\\quanlikhachhang.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|solutionrelative:qlsanbong\\quanlikhachhang.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|C:\\Users\\NITRO 5\\source\\repos\\Do_An_Mon.NET\\QLSanBong\\qlsanbong\\dangnhap.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|solutionrelative:qlsanbong\\dangnhap.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|D:\\nam_4\\net\\Do_An_Mon.NET\\qlsanbong\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|solutionrelative:qlsanbong\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|C:\\Users\\NITRO 5\\source\\repos\\Do_An_Mon.NET\\QLSanBong\\qlsanbong\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|solutionrelative:qlsanbong\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|D:\\nam_4\\net\\Do_An_Mon.NET\\qlsanbong\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|solutionrelative:qlsanbong\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|D:\\nam_4\\net\\Do_An_Mon.NET\\qlsanbong\\dangnhap.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|solutionrelative:qlsanbong\\dangnhap.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,36 +41,69 @@
           "SelectedChildIndex": 2,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\NITRO 5\\source\\repos\\Do_An_Mon.NET\\QLSanBong\\QLSanBong\\.gitignore",
-              "RelativeDocumentMoniker": "QLSanBong\\.gitignore",
-              "ToolTip": "C:\\Users\\NITRO 5\\source\\repos\\Do_An_Mon.NET\\QLSanBong\\QLSanBong\\.gitignore",
-              "RelativeToolTip": "QLSanBong\\.gitignore",
-              "ViewState": "AgIAABYAAAAAAAAAAAAmwBcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-09-22T03:29:28.879Z",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\nam_4\\net\\Do_An_Mon.NET\\QLSanBong\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "QLSanBong\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\nam_4\\net\\Do_An_Mon.NET\\QLSanBong\\MainWindow.xaml.cs",
+              "RelativeToolTip": "QLSanBong\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T09:30:00.699Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
+              "Title": "Model1.Context.cs",
+              "DocumentMoniker": "D:\\nam_4\\net\\Do_An_Mon.NET\\QLSanBong\\Model1.Context.cs",
+              "RelativeDocumentMoniker": "QLSanBong\\Model1.Context.cs",
+              "ToolTip": "D:\\nam_4\\net\\Do_An_Mon.NET\\QLSanBong\\Model1.Context.cs",
+              "RelativeToolTip": "QLSanBong\\Model1.Context.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T09:21:12.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": ".gitignore",
+              "DocumentMoniker": "D:\\nam_4\\net\\Do_An_Mon.NET\\QLSanBong\\.gitignore",
+              "RelativeDocumentMoniker": "QLSanBong\\.gitignore",
+              "ToolTip": "D:\\nam_4\\net\\Do_An_Mon.NET\\QLSanBong\\.gitignore",
+              "RelativeToolTip": "QLSanBong\\.gitignore",
+              "ViewState": "AgIAABYAAAAAAAAAAAAmwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-09-22T03:29:28.879Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "dangnhap.xaml",
-              "DocumentMoniker": "C:\\Users\\NITRO 5\\source\\repos\\Do_An_Mon.NET\\QLSanBong\\QLSanBong\\dangnhap.xaml",
+              "DocumentMoniker": "D:\\nam_4\\net\\Do_An_Mon.NET\\QLSanBong\\dangnhap.xaml",
               "RelativeDocumentMoniker": "QLSanBong\\dangnhap.xaml",
-              "ToolTip": "C:\\Users\\NITRO 5\\source\\repos\\Do_An_Mon.NET\\QLSanBong\\QLSanBong\\dangnhap.xaml",
+              "ToolTip": "D:\\nam_4\\net\\Do_An_Mon.NET\\QLSanBong\\dangnhap.xaml",
               "RelativeToolTip": "QLSanBong\\dangnhap.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-09-22T03:13:35.699Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\NITRO 5\\source\\repos\\Do_An_Mon.NET\\QLSanBong\\QLSanBong\\App.xaml",
+              "DocumentMoniker": "D:\\nam_4\\net\\Do_An_Mon.NET\\QLSanBong\\App.xaml",
               "RelativeDocumentMoniker": "QLSanBong\\App.xaml",
-              "ToolTip": "C:\\Users\\NITRO 5\\source\\repos\\Do_An_Mon.NET\\QLSanBong\\QLSanBong\\App.xaml",
+              "ToolTip": "D:\\nam_4\\net\\Do_An_Mon.NET\\QLSanBong\\App.xaml",
               "RelativeToolTip": "QLSanBong\\App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-09-22T03:04:07.251Z",
@@ -70,25 +111,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "QuanLiKhachHang.xaml",
-              "DocumentMoniker": "C:\\Users\\NITRO 5\\source\\repos\\Do_An_Mon.NET\\QLSanBong\\QLSanBong\\QuanLiKhachHang.xaml",
+              "DocumentMoniker": "D:\\nam_4\\net\\Do_An_Mon.NET\\QLSanBong\\QuanLiKhachHang.xaml",
               "RelativeDocumentMoniker": "QLSanBong\\QuanLiKhachHang.xaml",
-              "ToolTip": "C:\\Users\\NITRO 5\\source\\repos\\Do_An_Mon.NET\\QLSanBong\\QLSanBong\\QuanLiKhachHang.xaml",
+              "ToolTip": "D:\\nam_4\\net\\Do_An_Mon.NET\\QLSanBong\\QuanLiKhachHang.xaml",
               "RelativeToolTip": "QLSanBong\\QuanLiKhachHang.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-09-22T02:58:57.399Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\NITRO 5\\source\\repos\\Do_An_Mon.NET\\QLSanBong\\QLSanBong\\MainWindow.xaml",
+              "DocumentMoniker": "D:\\nam_4\\net\\Do_An_Mon.NET\\QLSanBong\\MainWindow.xaml",
               "RelativeDocumentMoniker": "QLSanBong\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\NITRO 5\\source\\repos\\Do_An_Mon.NET\\QLSanBong\\QLSanBong\\MainWindow.xaml",
+              "ToolTip": "D:\\nam_4\\net\\Do_An_Mon.NET\\QLSanBong\\MainWindow.xaml",
               "RelativeToolTip": "QLSanBong\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-09-22T02:40:17.614Z"
+              "WhenOpened": "2025-09-22T02:40:17.614Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 63,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
             }
           ]
         }

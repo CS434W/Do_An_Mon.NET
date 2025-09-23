@@ -20,6 +20,7 @@ namespace QLSanBong
     /// </summary>
     public partial class MainWindow : Window
     {
+        qlsanbongEntities qlsanbongEntities=new qlsanbongEntities();
         public MainWindow()
         {
             InitializeComponent();
