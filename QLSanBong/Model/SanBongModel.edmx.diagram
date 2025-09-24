@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b25ca7deca474fa2a85180dde9a47a5f" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.BAO_TRI" Width="1.5" PointX="5.25" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.KHACH_HANG" Width="1.5" PointX="6" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.LICH_DAT_SAN" Width="1.5" PointX="8.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.NHAN_VIEN" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.SAN_BONG" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.TAI_KHOAN" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.THANH_TOAN" Width="1.5" PointX="10.5" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.THIET_BI" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_BaoTri_NhanVienBT" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_BaoTri_ThietBi" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_LichDatSan_KhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_LichDatSan_NhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_LichDatSan_SanBong" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_ThanhToan_LichDatSan" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_NhanVien_TaiKhoan" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_ThanhToan_NhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_ThietBi_SanBong" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

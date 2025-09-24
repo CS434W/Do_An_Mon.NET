@@ -79,84 +79,84 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="BAO_TRI.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="Model\BAO_TRI.cs">
+      <DependentUpon>SanBongModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="dangki.xaml.cs">
-      <DependentUpon>dangki.xaml</DependentUpon>
+    <Compile Include="Model\CurrentUser.cs" />
+    <Compile Include="Model\KHACH_HANG.cs">
+      <DependentUpon>SanBongModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="dangnhap.xaml.cs">
+    <Compile Include="Model\LICH_DAT_SAN.cs">
+      <DependentUpon>SanBongModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\NHAN_VIEN.cs">
+      <DependentUpon>SanBongModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SAN_BONG.cs">
+      <DependentUpon>SanBongModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TAI_KHOAN.cs">
+      <DependentUpon>SanBongModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TAI_KHOAN.Partial.cs" />
+    <Compile Include="Model\THANH_TOAN.cs">
+      <DependentUpon>SanBongModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\THIET_BI.cs">
+      <DependentUpon>SanBongModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SanBongModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SanBongModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SanBongModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SanBongModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SanBongModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SanBongModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\BaseViewModel .cs" />
+    <Compile Include="ViewModel\DangNhapViewModel.cs" />
+    <Compile Include="ViewModel\MainWindowViewModel .cs" />
+    <Compile Include="ViewModel\QuanLiNguoiDungViewModel.cs" />
+    <Compile Include="ViewModel\RelayCommand.cs" />
+    <Compile Include="View\dangnhap.xaml.cs">
       <DependentUpon>dangnhap.xaml</DependentUpon>
     </Compile>
-    <Compile Include="KHACH_HANG.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="View\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="LICH_DAT_SAN.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="NHAN_VIEN.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="QuanLiKhachHang.xaml.cs">
+    <Compile Include="View\QuanLiKhachHang.xaml.cs">
       <DependentUpon>QuanLiKhachHang.xaml</DependentUpon>
     </Compile>
-    <Compile Include="QuanLiNguoiDung.xaml.cs">
+    <Compile Include="View\QuanLiNguoiDung.xaml.cs">
       <DependentUpon>QuanLiNguoiDung.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SAN_BONG.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TAI_KHOAN.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="THANH_TOAN.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="THIET_BI.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Page Include="dangki.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="dangnhap.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Page Include="QuanLiKhachHang.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="View\dangnhap.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
-    <Page Include="QuanLiNguoiDung.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\QuanLiKhachHang.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\QuanLiNguoiDung.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -177,12 +177,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="Model1.edmx">
+    <EntityDeploy Include="Model\SanBongModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+      <LastGenOutput>SanBongModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
+    <None Include="Model\SanBongModel.edmx.diagram">
+      <DependentUpon>SanBongModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -194,22 +194,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include=".gitignore" />
-    <Content Include="Model1.Context.tt">
+    <Content Include="Model\SanBongModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>SanBongModel.edmx</DependentUpon>
+      <LastGenOutput>SanBongModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Model1.tt">
+    <Content Include="Model\SanBongModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
+      <DependentUpon>SanBongModel.edmx</DependentUpon>
+      <LastGenOutput>SanBongModel.cs</LastGenOutput>
     </Content>
     <Content Include="qlsanbong.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
     <Content Include="qlsanbong_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <DependentUpon>qlsanbong.mdf</DependentUpon>
     </Content>
   </ItemGroup>
@@ -228,5 +227,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

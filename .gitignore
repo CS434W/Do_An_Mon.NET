@@ -15,9 +15,25 @@ obj/
 *.log
 *.dbmdl
 
+# SQL Server database
+*.mdf
+*.ldf
+
+# NuGet
+*.nupkg
+packages/
+
 # Others
 *.zip
 *.7z
 *.gz
 *.tar
 *.rar
+
+# Rider / VS Code
+.idea/
+.vscode/
+
+# Temporary files
+*.tmp
+*.bak
