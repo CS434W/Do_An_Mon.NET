@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -14,22 +15,9 @@
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <PublishUrl>publish\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
+
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
@@ -38,8 +26,8 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
@@ -47,8 +35,9 @@
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+
+  <!-- References -->
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -74,58 +63,44 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
   </ItemGroup>
+
+  <!-- Application Definition -->
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Converters\BoolToVisibilityConverter.cs" />
-    <Compile Include="Model\BAO_TRI.cs">
-      <DependentUpon>SanBongModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\CurrentUser.cs" />
-    <Compile Include="Model\KHACH_HANG.cs">
-      <DependentUpon>SanBongModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\LICH_DAT_SAN.cs">
-      <DependentUpon>SanBongModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\NHAN_VIEN.cs">
-      <DependentUpon>SanBongModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\SAN_BONG.cs">
-      <DependentUpon>SanBongModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\TAI_KHOAN.cs">
-      <DependentUpon>SanBongModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\TAI_KHOAN.Partial.cs" />
-    <Compile Include="Model\THANH_TOAN.cs">
-      <DependentUpon>SanBongModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\THIET_BI.cs">
-      <DependentUpon>SanBongModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\SanBongModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SanBongModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\SanBongModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SanBongModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\SanBongModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SanBongModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="ViewModel\BaseViewModel .cs" />
+  </ItemGroup>
+
+  <!-- ViewModels -->
+  <ItemGroup>
+    <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\DangNhapViewModel.cs" />
-    <Compile Include="ViewModel\MainWindowViewModel .cs" />
+    <Compile Include="ViewModel\MainWindowViewModel.cs" />
+    <Compile Include="ViewModel\QlySanBongViewModel.cs" />
     <Compile Include="ViewModel\QuanLiNguoiDungViewModel.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
+  </ItemGroup>
+
+  <!-- Models -->
+  <ItemGroup>
+    <Compile Include="Model\BAO_TRI.cs" />
+    <Compile Include="Model\CurrentUser.cs" />
+    <Compile Include="Model\KHACH_HANG.cs" />
+    <Compile Include="Model\LICH_DAT_SAN.cs" />
+    <Compile Include="Model\NHAN_VIEN.cs" />
+    <Compile Include="Model\SAN_BONG.cs" />
+    <Compile Include="Model\TAI_KHOAN.cs" />
+    <Compile Include="Model\TAI_KHOAN.Partial.cs" />
+    <Compile Include="Model\THANH_TOAN.cs" />
+    <Compile Include="Model\THIET_BI.cs" />
+    <Compile Include="Model\SanBongModel.Context.cs" />
+    <Compile Include="Model\SanBongModel.cs" />
+    <Compile Include="Model\SanBongModel.Designer.cs" />
+  </ItemGroup>
+
+  <!-- Views -->
+  <ItemGroup>
     <Compile Include="View\dangnhap.xaml.cs">
       <DependentUpon>dangnhap.xaml</DependentUpon>
     </Compile>
@@ -138,10 +113,10 @@
     <Compile Include="View\QuanLiNguoiDung.xaml.cs">
       <DependentUpon>QuanLiNguoiDung.xaml</DependentUpon>
     </Compile>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
+    <Compile Include="View\QuanLySanBong.xaml.cs">
+      <DependentUpon>QuanLySanBong.xaml</DependentUpon>
     </Compile>
+
     <Page Include="View\dangnhap.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -158,75 +133,53 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="View\QuanLySanBong.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
+
+  <!-- Properties -->
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs" />
+    <Compile Include="Properties\Settings.Designer.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx" />
+  </ItemGroup>
+
+  <!-- Entity Framework -->
+  <ItemGroup>
     <EntityDeploy Include="Model\SanBongModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>SanBongModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model\SanBongModel.edmx.diagram">
-      <DependentUpon>SanBongModel.edmx</DependentUpon>
-    </None>
-    <None Include="packages.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Model\SanBongModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SanBongModel.edmx</DependentUpon>
-      <LastGenOutput>SanBongModel.Context.cs</LastGenOutput>
-    </Content>
+    <None Include="Model\SanBongModel.edmx.diagram" />
     <Content Include="Model\SanBongModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SanBongModel.edmx</DependentUpon>
       <LastGenOutput>SanBongModel.cs</LastGenOutput>
     </Content>
+    <Content Include="Model\SanBongModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SanBongModel.Context.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+
+  <!-- Database -->
+  <ItemGroup>
     <Content Include="qlsanbong.mdf">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
     <Content Include="qlsanbong_log.ldf">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <DependentUpon>qlsanbong.mdf</DependentUpon>
     </Content>
   </ItemGroup>
+
+  <!-- Config -->
   <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
+    <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup />
+
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
