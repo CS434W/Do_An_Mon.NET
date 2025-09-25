@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
 namespace QLSanBong.View
 {
     /// <summary>
@@ -55,16 +56,7 @@ namespace QLSanBong.View
                     MessageBox.Show("Hãy chọn sân cần sửa");
                     return;
                 }
-                Model.SAN_BONG sv = new Model.SAN_BONG
-                {
-                    MaSan = svchon.MaSan,
-                    TenSan = txt_TenSan.Text,
-                    LoaiSan = cb_LoaiSan.Text,
-                    DonGia = decimal.Parse(txt_DonGia.Text),
-                    TrangThai = cb_trangThai.SelectedIndex == 1
-                };
-                sbvm.SuaSanBong(sv);
-                sbvm.LoadSAN(dataGrid_QLSB);
+
                 MessageBox.Show("Sửa sân bóng thành công");
             }
 
@@ -93,9 +85,7 @@ namespace QLSanBong.View
             txt_DonGia.Text = sv.DonGia.ToString();
             cb_LoaiSan.Text = sv.LoaiSan;
             if (sv.TrangThai == true)
-                cb_trangThai.SelectedIndex = 1; // Hoạt động
-            else
-                cb_trangThai.SelectedIndex = 0; // Không hoạt động
+
         }
     }
 }
