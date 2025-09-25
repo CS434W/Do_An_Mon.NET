@@ -27,7 +27,8 @@ namespace QLSanBong.View
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
+            // Load data from database into grid whenever window loads
+            sbvm.LoadSAN(dataGrid_QLSB);
         }
 
         private void btn_Them_Click(object sender, RoutedEventArgs e)

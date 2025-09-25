@@ -54,8 +54,25 @@ namespace QLSanBong.View
                 return;
             }
 
-            // Đã đăng nhập: tại đây có thể điều hướng tới trang tương ứng
-            // Ví dụ: mở cửa sổ quản lý, v.v. (chưa yêu cầu nên để trống)
+            // Đã đăng nhập: điều hướng tới trang tương ứng
+            var button = sender as Button;
+            if (button == null) return;
+
+            if (button.Name == "btnSanBong")
+            {
+                var qlsb = new QuanLySanBong();
+                qlsb.Show();
+                return;
+            }
+
+            if (button.Name == "btnNguoiDung")
+            {
+                var qlnd = new QuanLiNguoiDung();
+                qlnd.Show();
+                return;
+            }
+
+            MessageBox.Show("Chức năng đang phát triển");
         }
     }
 }

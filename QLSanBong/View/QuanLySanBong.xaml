@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QLSanBong.View"
         mc:Ignorable="d"
-        Title="QuanLySanBong" Height="450" Width="800">
+        Title="QuanLySanBong" Height="450" Width="800"
+        Loaded="Window_Loaded">
     <Grid>
         <GroupBox Header="Thôn tin chi tiết sân bóng" Margin="10">
             <Grid>
@@ -53,7 +54,7 @@
                     <Button x:Name="btn_Them" Content="Thêm" Width="100" Margin="10" Click="btn_Them_Click" />
                     <Button x:Name="btn_Sua" Content="Sửa" Width="100" Margin="10" Click="btn_Sua_Click"/>
                     <Button x:Name="btn_Xoa" Content="Xóa" Width="100" Margin="10" Click="btn_Xoa_Click"/>
-                    <Button x:Name="btn_TKiem" Content="Tìm kiếm" Width="100" Margin="10" Click="btn_TKiem_Click"/>
+                    <Button x:Name="btn_TKiem" Content="Tìm kiếm" Width="100" Margin="10"/>
                 </WrapPanel>
 
                 <DataGrid x:Name="dataGrid_QLSB" Grid.Row="6" Grid.ColumnSpan="2" Margin="10" AutoGenerateColumns="False" SelectionChanged="dataGrid_QLSB_SelectionChanged">

@@ -49,6 +49,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <!-- References -->
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -74,12 +75,13 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
   </ItemGroup>
+  <!-- Application + Code -->
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Converters\BoolToVisibilityConverter.cs" />
+    <!-- Models -->
     <Compile Include="Model\BAO_TRI.cs">
       <DependentUpon>SanBongModel.tt</DependentUpon>
     </Compile>
@@ -92,6 +94,11 @@
     </Compile>
     <Compile Include="Model\NHAN_VIEN.cs">
       <DependentUpon>SanBongModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SanBongModel.Designer.cs">
+      <DependentUpon>SanBongModel.edmx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Model\SAN_BONG.cs">
       <DependentUpon>SanBongModel.tt</DependentUpon>
@@ -116,16 +123,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SanBongModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\SanBongModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SanBongModel.edmx</DependentUpon>
-    </Compile>
+    <!-- ViewModels -->
     <Compile Include="ViewModel\BaseViewModel .cs" />
     <Compile Include="ViewModel\DangNhapViewModel.cs" />
     <Compile Include="ViewModel\MainWindowViewModel .cs" />
     <Compile Include="ViewModel\QuanLiNguoiDungViewModel.cs" />
+    <Compile Include="ViewModel\QlySanBongViewModel.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
+    <!-- Views -->
     <Compile Include="View\dangnhap.xaml.cs">
       <DependentUpon>dangnhap.xaml</DependentUpon>
     </Compile>
@@ -137,6 +142,9 @@
     </Compile>
     <Compile Include="View\QuanLiNguoiDung.xaml.cs">
       <DependentUpon>QuanLiNguoiDung.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\QuanLySanBong.xaml.cs">
+      <DependentUpon>QuanLySanBong.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -158,7 +166,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="View\QuanLySanBong.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Converters\BoolToVisibilityConverter.cs" />
   </ItemGroup>
+  <!-- Properties -->
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -177,6 +191,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <!-- Database & T4 -->
+  <ItemGroup>
     <EntityDeploy Include="Model\SanBongModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>SanBongModel.Designer.cs</LastGenOutput>
@@ -185,15 +206,6 @@
       <DependentUpon>SanBongModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Model\SanBongModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>SanBongModel.edmx</DependentUpon>
@@ -212,6 +224,7 @@
       <DependentUpon>qlsanbong.mdf</DependentUpon>
     </Content>
   </ItemGroup>
+  <!-- Bootstrapper -->
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">
       <Visible>False</Visible>
@@ -224,9 +237,11 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+<ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
