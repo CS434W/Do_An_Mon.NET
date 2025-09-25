@@ -26,16 +26,63 @@ namespace QLSanBong.ViewModel
                 db.SaveChanges();
             }
         }
-        public void SuaSanBong(Model.SAN_BONG CapNhap)
+        public void SuaSanBong(string oldMaSan, Model.SAN_BONG capNhat)
         {
-            Model.SAN_BONG sb = db.SAN_BONG.Find(CapNhap.MaSan);
-            if (sb != null)
+            // Nếu mã sân không đổi, cập nhật trực tiếp
+            if (string.Equals(oldMaSan, capNhat.MaSan, StringComparison.OrdinalIgnoreCase))
             {
-                sb.TenSan = CapNhap.TenSan;
-                sb.LoaiSan = CapNhap.LoaiSan;
-                sb.DonGia = CapNhap.DonGia;
-                sb.TrangThai = CapNhap.TrangThai;
-                db.SaveChanges();
+                Model.SAN_BONG sb = db.SAN_BONG.Find(oldMaSan);
+                if (sb != null)
+                {
+                    sb.TenSan = capNhat.TenSan;
+                    sb.LoaiSan = capNhat.LoaiSan;
+                    sb.DonGia = capNhat.DonGia;
+                    sb.TrangThai = capNhat.TrangThai;
+                    db.SaveChanges();
+                }
+                return;
+            }
+
+            // Đổi mã sân (khóa chính): tạo mới, cập nhật tham chiếu, xóa bản ghi cũ
+            using (var tx = db.Database.BeginTransaction())
+            {
+                try
+                {
+                    // Thêm bản ghi mới với mã mới
+                    var sbMoi = new Model.SAN_BONG
+                    {
+                        MaSan = capNhat.MaSan,
+                        TenSan = capNhat.TenSan,
+                        LoaiSan = capNhat.LoaiSan,
+                        DonGia = capNhat.DonGia,
+                        TrangThai = capNhat.TrangThai
+                    };
+                    db.SAN_BONG.Add(sbMoi);
+                    db.SaveChanges();
+
+                    // Cập nhật các tham chiếu từ lịch đặt sân sang mã mới
+                    var lichs = db.LICH_DAT_SAN.Where(l => l.MaSan == oldMaSan).ToList();
+                    foreach (var lich in lichs)
+                    {
+                        lich.MaSan = capNhat.MaSan;
+                    }
+                    db.SaveChanges();
+
+                    // Xóa bản ghi cũ
+                    var sbCu = db.SAN_BONG.Find(oldMaSan);
+                    if (sbCu != null)
+                    {
+                        db.SAN_BONG.Remove(sbCu);
+                        db.SaveChanges();
+                    }
+
+                    tx.Commit();
+                }
+                catch
+                {
+                    tx.Rollback();
+                    throw;
+                }
             }
         }
         public void LoadSAN(DataGrid dg)//using System.Windows.Controls;
