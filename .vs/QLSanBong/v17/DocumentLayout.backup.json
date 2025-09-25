@@ -1,12 +1,20 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\nam_4\\net\\Do_An_Mon.NET\\",
+  "WorkspaceRootPath": "D:\\nam_4\\tienganh_thaytru\\listening\\Do_An_MonNET\\",
   "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|d:\\nam_4\\tienganh_thaytru\\listening\\do_an_monnet\\qlsanbong\\view\\quanlysanbong.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|solutionrelative:qlsanbong\\view\\quanlysanbong.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|d:\\nam_4\\tienganh_thaytru\\listening\\do_an_monnet\\qlsanbong\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|solutionrelative:qlsanbong\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/D__NAM_4_NET_DO_AN_MON.NET_QLSANBONG_QLSANBONG.MDF/True/SqlTable/dbo.TAI_KHOAN.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|D:\\nam_4\\net\\Do_An_Mon.NET\\qlsanbong\\viewmodel\\dangnhapviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|D:\\nam_4\\tienganh_thaytru\\listening\\Do_An_MonNET\\qlsanbong\\viewmodel\\dangnhapviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}|QLSanBong\\QLSanBong.csproj|solutionrelative:qlsanbong\\viewmodel\\dangnhapviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -29,6 +37,30 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "QuanLySanBong.xaml",
+              "DocumentMoniker": "D:\\nam_4\\tienganh_thaytru\\listening\\Do_An_MonNET\\QLSanBong\\View\\QuanLySanBong.xaml",
+              "RelativeDocumentMoniker": "QLSanBong\\View\\QuanLySanBong.xaml",
+              "ToolTip": "D:\\nam_4\\tienganh_thaytru\\listening\\Do_An_MonNET\\QLSanBong\\View\\QuanLySanBong.xaml",
+              "RelativeToolTip": "QLSanBong\\View\\QuanLySanBong.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-25T15:39:57.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\nam_4\\tienganh_thaytru\\listening\\Do_An_MonNET\\QLSanBong\\App.xaml",
+              "RelativeDocumentMoniker": "QLSanBong\\App.xaml",
+              "ToolTip": "D:\\nam_4\\tienganh_thaytru\\listening\\Do_An_MonNET\\QLSanBong\\App.xaml",
+              "RelativeToolTip": "QLSanBong\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-25T15:30:42.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "dbo.TAI_KHOAN.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/D__NAM_4_NET_DO_AN_MON.NET_QLSANBONG_QLSANBONG.MDF/True/SqlTable/dbo.TAI_KHOAN.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/D__NAM_4_NET_DO_AN_MON.NET_QLSANBONG_QLSANBONG.MDF/True/SqlTable/dbo.TAI_KHOAN.sql",
@@ -37,11 +69,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "DangNhapViewModel.cs",
-              "DocumentMoniker": "D:\\nam_4\\net\\Do_An_Mon.NET\\QLSanBong\\ViewModel\\DangNhapViewModel.cs",
+              "DocumentMoniker": "D:\\nam_4\\tienganh_thaytru\\listening\\Do_An_MonNET\\QLSanBong\\ViewModel\\DangNhapViewModel.cs",
               "RelativeDocumentMoniker": "QLSanBong\\ViewModel\\DangNhapViewModel.cs",
-              "ToolTip": "D:\\nam_4\\net\\Do_An_Mon.NET\\QLSanBong\\ViewModel\\DangNhapViewModel.cs",
+              "ToolTip": "D:\\nam_4\\tienganh_thaytru\\listening\\Do_An_MonNET\\QLSanBong\\ViewModel\\DangNhapViewModel.cs",
               "RelativeToolTip": "QLSanBong\\ViewModel\\DangNhapViewModel.cs",
               "ViewState": "AgIAACUAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -49,7 +81,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "dbo.NHAN_VIEN.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_ADMIN_DOWNLOADS_THUNGRAC_DO_AN_MON.NET_DO_AN_MON.NET_QLSANBONG_QLSANBONG.MDF/True/SqlTable/dbo.NHAN_VIEN.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_ADMIN_DOWNLOADS_THUNGRAC_DO_AN_MON.NET_DO_AN_MON.NET_QLSANBONG_QLSANBONG.MDF/True/SqlTable/dbo.NHAN_VIEN.sql",
