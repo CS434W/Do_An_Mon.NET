@@ -17,10 +17,6 @@ obj/
 *.log
 *.dbmdl
 
-# SQL Server database
-*.mdf
-*.ldf
-
 # NuGet
 *.nupkg
 packages/
