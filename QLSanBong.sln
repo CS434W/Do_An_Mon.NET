@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36429.23 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLSanBong", "QLSanBong\QLSanBong.csproj", "{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56CD957D-E274-4A9B-9BAE-444B3A28A0CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4BB51F18-7D9F-4C5E-BBD6-9DC1A4447F22}
+	EndGlobalSection
+EndGlobal
