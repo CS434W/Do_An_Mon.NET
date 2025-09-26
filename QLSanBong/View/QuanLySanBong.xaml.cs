@@ -33,17 +33,24 @@ namespace QLSanBong.View
 
         private void btn_Them_Click(object sender, RoutedEventArgs e)
         {
+            decimal donGia;
+            if (!decimal.TryParse(txt_DonGia.Text, out donGia))
+            {
+                MessageBox.Show("Đơn giá không hợp lệ");
+                return;
+            }
+
             Model.SAN_BONG sv = new Model.SAN_BONG
             {
                 MaSan = txt_MaSan.Text,
                 TenSan = txt_TenSan.Text,
                 LoaiSan = cb_LoaiSan.Text,
-                DonGia = decimal.Parse(txt_DonGia.Text),
+                DonGia = donGia,
                 TrangThai = cb_trangThai.SelectedIndex == 1
             };
             sbvm.ThemSANBONG(sv);
             sbvm.LoadSAN(dataGrid_QLSB);
-            MessageBox.Show("Thêm sinh viên thành công");
+            MessageBox.Show("Thêm sân bóng thành công");
 
         }
 
@@ -56,15 +63,22 @@ namespace QLSanBong.View
                     MessageBox.Show("Hãy chọn sân cần sửa");
                     return;
                 }
+                decimal donGia;
+                if (!decimal.TryParse(txt_DonGia.Text, out donGia))
+                {
+                    MessageBox.Show("Đơn giá không hợp lệ");
+                    return;
+                }
+
                 Model.SAN_BONG sv = new Model.SAN_BONG
                 {
-                    MaSan = svchon.MaSan,
+                    MaSan = txt_MaSan.Text,
                     TenSan = txt_TenSan.Text,
                     LoaiSan = cb_LoaiSan.Text,
-                    DonGia = decimal.Parse(txt_DonGia.Text),
+                    DonGia = donGia,
                     TrangThai = cb_trangThai.SelectedIndex == 1
                 };
-                sbvm.SuaSanBong(sv);
+                sbvm.SuaSanBong(svchon.MaSan, sv);
                 sbvm.LoadSAN(dataGrid_QLSB);
                 MessageBox.Show("Sửa sân bóng thành công");
             }
