@@ -45,3 +45,12 @@ packages/
 *.Designer.cs
 *.g.cs
 *.g.i.cs
+.vs/
+*.suo
+*.user
+QLSanBong/bin/
+QLSanBong/obj/
+QLSanBong/qlsanbong.mdf
+QLSanBong/qlsanbong_log.ldf
+*.mdf
+*.ldf
