@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:QLSanBong"
         mc:Ignorable="d"
         Title="QuanLiKhachHang" Height="450" Width="800">
-    <Grid>
+    <Grid RenderTransformOrigin="0.725,0.953">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -20,17 +20,17 @@
 
         <!-- Thanh tìm kiếm -->
         <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10" VerticalAlignment="Bottom">
-            <TextBox x:Name="txtTimKiem" Width="200" Height="25" Margin="5,0"/>
-            <Button x:Name="btnTimKiem" Content="Tìm kiếm" Width="80" Height="25" Margin="5,0"/>
+            <TextBox x:Name="txtTimKiem" Width="158" Height="25"/>
+            <Button x:Name="btnTimKiem" Content="Tìm kiếm" Width="80" Height="25" Margin="5,0" Click="btnTimKiem_Click" Background="SteelBlue" Foreground="White"/>
         </StackPanel>
 
         <!-- Danh sách khách hàng -->
         <DataGrid x:Name="dgvKhachHang" Grid.Row="1" Margin="10" AutoGenerateColumns="False" 
-               SelectionMode="Single" IsReadOnly="True">
+               SelectionMode="Single" IsReadOnly="True"  SelectionChanged="DgvKhachHang_SelectionChanged">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Mã KH" Binding="{Binding MaKH}" Width="80"/>
+                <DataGridTextColumn Header="Mã KH" Binding="{Binding MaKH}" Width="100"/>
                 <DataGridTextColumn Header="Tên KH" Binding="{Binding TenKH}" Width="200"/>
-                <DataGridTextColumn Header="SĐT" Binding="{Binding SDT}" Width="120"/>
+                <DataGridTextColumn Header="SĐT" Binding="{Binding SDT}" Width="180"/>
                 <DataGridTextColumn Header="Ghi chú" Binding="{Binding GhiChu}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
@@ -43,7 +43,7 @@
             </Grid.ColumnDefinitions>
 
             <!-- Thông tin chi tiết -->
-            <GroupBox Grid.Column="0" Header="Thông tin chi tiết" Margin="0,0,5,0">
+            <GroupBox Grid.Column="0" Header="Thông tin chi tiết" Margin="0,0,5,-25">
                 <Grid Margin="5">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
@@ -51,29 +51,30 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
-                    <Label Grid.Row="0" Grid.Column="0" Content="Mã KH:" Margin="5"/>
-                    <TextBox x:Name="txtMaKH" Grid.Row="0" Grid.Column="1" Margin="5" IsReadOnly="True"/>
+                    <Label Grid.Row="0" Grid.Column="0" Content="Mã KH:" Margin="5,5,5,5"/>
+                    <TextBox x:Name="txtMaKH" Grid.Row="0" Grid.Column="1" Margin="5,5,5,5" IsReadOnly="True"/>
 
-                    <Label Grid.Row="1" Grid.Column="0" Content="Tên KH:" Margin="5"/>
-                    <TextBox x:Name="txtTenKH" Grid.Row="1" Grid.Column="1" Margin="5"/>
+                    <Label Grid.Row="1" Grid.Column="0" Content="Tên KH:" Margin="5,5,5,5"/>
+                    <TextBox x:Name="txtTenKH" Grid.Row="1" Grid.Column="1" Margin="5,5,5,5"/>
 
-                    <Label Grid.Row="2" Grid.Column="0" Content="SĐT:" Margin="5"/>
-                    <TextBox x:Name="txtSDT" Grid.Row="2" Grid.Column="1" Margin="5"/>
+                    <Label Grid.Row="2" Grid.Column="0" Content="SĐT:" Margin="5,5,5,5"/>
+                    <TextBox x:Name="txtSDT" Grid.Row="2" Grid.Column="1" Margin="5,5,5,5"/>
 
                     <Label Grid.Row="3" Grid.Column="0" Content="Ghi chú:" Margin="5"/>
-                    <TextBox x:Name="txtGhiChu" Grid.Row="3" Grid.Column="1" Margin="5" Height="60" 
-                          VerticalScrollBarVisibility="Auto" TextWrapping="Wrap"/>
+                    <TextBox x:Name="txtGhiChu" Grid.Row="3" Grid.Column="1" Margin="5,5,5,5" 
+                          VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" Height="31" VerticalAlignment="Top" Grid.RowSpan="2"/>
 
-                    <StackPanel Grid.Row="4" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
-                        <Button x:Name="btnThem" Content="Thêm" Width="70" Margin="5"/>
-                        <Button x:Name="btnSua" Content="Sửa" Width="70" Margin="5"/>
-                        <Button x:Name="btnXoa" Content="Xóa" Width="70" Margin="5"/>
+                    <StackPanel Grid.Row="4" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Left" Margin="2,14,0,-4" Grid.RowSpan="2">
+                        <Button x:Name="btnThem" Content="Thêm" Width="59" Margin="5" Click="btnThem_Click" Background="Bisque"/>
+                        <Button x:Name="btnSua" Content="Sửa" Width="70" Margin="5" Click="btnSua_Click" Background="Aquamarine"/>
+                        <Button x:Name="btnXoa" Content="Xóa" Width="70" Margin="5" Click="btnXoa_Click" Background="Cornsilk"/>
                     </StackPanel>
                 </Grid>
             </GroupBox>
@@ -82,11 +83,11 @@
             <GroupBox Grid.Column="1" Header="Lịch sử đặt sân" Margin="5,0,0,0">
                 <DataGrid x:Name="dgvLichSuDatSan" Margin="5" AutoGenerateColumns="False" IsReadOnly="True">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Mã đặt" Binding="{Binding MaDat}" Width="70"/>
-                        <DataGridTextColumn Header="Sân" Binding="{Binding TenSan}" Width="120"/>
-                        <DataGridTextColumn Header="Bắt đầu" Binding="{Binding ThoiGianBatDau, StringFormat={}{0:dd/MM/yyyy HH:mm}}" Width="120"/>
-                        <DataGridTextColumn Header="Kết thúc" Binding="{Binding ThoiGianKetThuc, StringFormat={}{0:dd/MM/yyyy HH:mm}}" Width="120"/>
-                        <DataGridTextColumn Header="Trạng thái" Binding="{Binding TinhTrang}" Width="100"/>
+                        <DataGridTextColumn Header="Mã đặt" Width="80"/>
+                        <DataGridTextColumn Header="Sân"  Width="100"/>
+                        <DataGridTextColumn Header="Bắt đầu"  Width="120"/>
+                        <DataGridTextColumn Header="Kết thúc"  Width="120"/>
+                        <DataGridTextColumn Header="Trạng thái"  Width="*"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </GroupBox>
@@ -94,8 +95,8 @@
 
         <!-- Nút điều khiển -->
         <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
-            <Button x:Name="btnLamMoi" Content="Làm mới" Width="80" Margin="5"/>
-            <Button x:Name="btnDong" Content="Đóng" Width="80" Margin="5"/>
+            <Button x:Name="btnLamMoi" Content="Làm mới" Width="80" Margin="5" Click="btnLamMoi_Click" Background="MistyRose" />
+            <Button x:Name="btnDong" Content="Đóng" Width="80" Margin="5" Click="btnDong_Click" Background="DarkSeaGreen"/>
             <Button x:Name="btnDangXuat" Content="Đăng xuất" Width="80" Margin="5" Click="btnDangXuat_Click" Background="#DC3545" Foreground="White"/>
         </StackPanel>
     </Grid>

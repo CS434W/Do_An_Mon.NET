@@ -127,6 +127,7 @@
     <Compile Include="ViewModel\BaseViewModel .cs" />
     <Compile Include="ViewModel\DangNhapViewModel.cs" />
     <Compile Include="ViewModel\MainWindowViewModel .cs" />
+    <Compile Include="ViewModel\QLyKhachHangViewModel.cs" />
     <Compile Include="ViewModel\QuanLiNguoiDungViewModel.cs" />
     <Compile Include="ViewModel\QlySanBongViewModel.cs" />
     <Compile Include="ViewModel\QuanLyThanhToanViewModel.cs" />
@@ -245,7 +246,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-<ItemGroup>
+  <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
