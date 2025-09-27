@@ -15,10 +15,6 @@ obj/
 *.log
 *.dbmdl
 
-# SQL Server database
-*.mdf
-*.ldf
-
 # NuGet
 *.nupkg
 packages/
@@ -37,3 +33,7 @@ packages/
 # Temporary files
 *.tmp
 *.bak
+!Data/
+!Data/*.mdf
+!Data/*.ldf
+
