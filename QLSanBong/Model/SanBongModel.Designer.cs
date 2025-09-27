@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\nam_4\net\Do_An_Mon.NET\QLSanBong\Model\SanBongModel.edmx'. 
+﻿// T4 code generation is enabled for model 'F:\Do_An_MonNET\QLSanBong\Model\SanBongModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

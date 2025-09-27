@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         xmlns:conv="clr-namespace:QLSanBong.Converters"
         Title="MainWindow" Height="450" Width="800">
-    
+
     <Window.Resources>
         <conv:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
     </Window.Resources>
@@ -100,23 +100,58 @@
                 <Border Background="#F0F0F0" Margin="0,20,0,0" Padding="15" CornerRadius="5">
                     <StackPanel>
                         <TextBlock Text="Thông tin nhanh" FontWeight="Bold" Margin="0,0,0,10"/>
+
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Hôm nay: " FontWeight="Bold"/>
-                            <TextBlock x:Name="txtToday" Text="15 đặt sân"/>
+                            <TextBlock x:Name="txtToday" />
                         </StackPanel>
+
                         <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
                             <TextBlock Text="Tổng khách: " FontWeight="Bold"/>
-                            <TextBlock x:Name="txtTotalCustomers" Text="128 khách hàng"/>
+                            <TextBlock x:Name="txtTotalCustomers" />
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                            <TextBlock Text="Doanh thu: " FontWeight="Bold"/>
+                            <TextBlock x:Name="txtRevenue" />
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                            <TextBlock Text="Sân trống: " FontWeight="Bold"/>
+                            <TextBlock x:Name="txtEmptyFields" />
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                            <TextBlock Text="Chờ thanh toán: " FontWeight="Bold"/>
+                            <TextBlock x:Name="txtPendingPayments" />
                         </StackPanel>
                     </StackPanel>
                 </Border>
+
+
             </StackPanel>
         </ScrollViewer>
 
         <!-- Nút đăng nhập hiển thị khi chưa đăng nhập -->
         <StackPanel Grid.Row="2" Orientation="Horizontal" 
                     HorizontalAlignment="Center" Margin="0,10,0,10">
-            <Button x:Name="btnDangNhap" Content="Đăng nhập" Click="btnDangNhap_Click"/>
+            <Button x:Name="btnDangNhap" 
+        Content="Đăng nhập" 
+        Click="btnDangNhap_Click"
+        Width="120" Height="40" Foreground="Black"
+        BorderThickness="0" 
+        Cursor="Hand">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                    CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
         </StackPanel>
 
         <!-- Footer -->
