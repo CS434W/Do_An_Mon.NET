@@ -100,23 +100,81 @@
                 <Border Background="#F0F0F0" Margin="0,20,0,0" Padding="15" CornerRadius="5">
                     <StackPanel>
                         <TextBlock Text="Thông tin nhanh" FontWeight="Bold" Margin="0,0,0,10"/>
+
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Hôm nay: " FontWeight="Bold"/>
-                            <TextBlock x:Name="txtToday" Text="15 đặt sân"/>
+                            <TextBlock x:Name="txtToday" />
                         </StackPanel>
+
                         <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
                             <TextBlock Text="Tổng khách: " FontWeight="Bold"/>
-                            <TextBlock x:Name="txtTotalCustomers" Text="128 khách hàng"/>
+                            <TextBlock x:Name="txtTotalCustomers" />
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                            <TextBlock Text="Doanh thu: " FontWeight="Bold"/>
+                            <TextBlock x:Name="txtRevenue" />
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                            <TextBlock Text="Sân trống: " FontWeight="Bold"/>
+                            <TextBlock x:Name="txtEmptyFields" />
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                            <TextBlock Text="Chờ thanh toán: " FontWeight="Bold"/>
+                            <TextBlock x:Name="txtPendingPayments" />
                         </StackPanel>
                     </StackPanel>
                 </Border>
             </StackPanel>
         </ScrollViewer>
 
-        <!-- Nút đăng nhập hiển thị khi chưa đăng nhập -->
+        <!-- Nút đăng nhập/đăng xuất -->
         <StackPanel Grid.Row="2" Orientation="Horizontal" 
                     HorizontalAlignment="Center" Margin="0,10,0,10">
-            <Button x:Name="btnDangNhap" Content="Đăng nhập" Click="btnDangNhap_Click"/>
+            <!-- Nút đăng nhập (hiển thị khi chưa đăng nhập) -->
+            <Button x:Name="btnDangNhap" 
+        Content="Đăng nhập" 
+        Click="btnDangNhap_Click"
+        Width="120" Height="40" Foreground="Black"
+        BorderThickness="0" 
+        Cursor="Hand">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                    CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <!-- Nút đăng xuất (hiển thị khi đã đăng nhập) -->
+            <Button x:Name="btnDangXuat" 
+        Content="Đăng xuất" 
+        Click="btnDangXuat_Click"
+        Width="120" Height="40" Foreground="White"
+        Background="#DC3545"
+        BorderThickness="0" 
+        Cursor="Hand"
+        Margin="10,0,0,0">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                    CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <!-- Thông tin người dùng (hiển thị khi đã đăng nhập) -->
+            <StackPanel x:Name="userInfoPanel" Orientation="Horizontal" Margin="20,0,0,0">
+                <TextBlock x:Name="txtUserInfo" Text="" FontWeight="Bold" VerticalAlignment="Center"/>
+            </StackPanel>
         </StackPanel>
 
         <!-- Footer -->

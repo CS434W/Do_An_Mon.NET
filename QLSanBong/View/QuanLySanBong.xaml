@@ -55,6 +55,8 @@
                     <Button x:Name="btn_Sua" Content="Sửa" Width="100" Margin="10" Click="btn_Sua_Click"/>
                     <Button x:Name="btn_Xoa" Content="Xóa" Width="100" Margin="10" Click="btn_Xoa_Click"/>
                     <Button x:Name="btn_TKiem" Content="Tìm kiếm" Width="100" Margin="10"/>
+                    <Button x:Name="btn_QuayVe" Content="Quay về" Width="100" Margin="10" Click="btn_QuayVe_Click" Background="LightGray"/>
+                    <Button x:Name="btn_DangXuat" Content="Đăng xuất" Width="100" Margin="10" Click="btn_DangXuat_Click" Background="#DC3545" Foreground="White"/>
                 </WrapPanel>
 
                 <DataGrid x:Name="dataGrid_QLSB" Grid.Row="6" Grid.ColumnSpan="2" Margin="10" AutoGenerateColumns="False" SelectionChanged="dataGrid_QLSB_SelectionChanged">

@@ -23,5 +23,39 @@ namespace QLSanBong.View
         {
             InitializeComponent();
         }
+
+        private void btnDangXuat_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                // Xác nhận đăng xuất
+                var result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", 
+                    "Xác nhận đăng xuất", 
+                    MessageBoxButton.YesNo, 
+                    MessageBoxImage.Question);
+
+                if (result == MessageBoxResult.Yes)
+                {
+                    // Xóa thông tin user hiện tại
+                    QLSanBong.Model.CurrentUser.User = null;
+                    
+                    // Mở form đăng nhập
+                    var loginWindow = new dangnhap();
+                    loginWindow.Show();
+                    
+                    // Đóng form hiện tại
+                    this.Close();
+                    
+                    // Hiển thị thông báo
+                    MessageBox.Show("Đã đăng xuất thành công!", "Thông báo", 
+                        MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi đăng xuất: {ex.Message}", "Lỗi", 
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
     }
 }

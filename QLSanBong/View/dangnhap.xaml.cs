@@ -33,6 +33,10 @@ namespace QLSanBong.View
             if (vm != null)
             {
                 string matKhau = passwordBox.Password; // đảm bảo lấy đúng
+                
+                // Hiển thị thông tin debug
+                debugInfo.Text = $"Đang đăng nhập với: {vm.TenDangNhap} / {matKhau}";
+                
                 vm.DangNhap(matKhau);
             }
         }

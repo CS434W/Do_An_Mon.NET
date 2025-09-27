@@ -96,6 +96,7 @@
         <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
             <Button x:Name="btnLamMoi" Content="Làm mới" Width="80" Margin="5"/>
             <Button x:Name="btnDong" Content="Đóng" Width="80" Margin="5"/>
+            <Button x:Name="btnDangXuat" Content="Đăng xuất" Width="80" Margin="5" Click="btnDangXuat_Click" Background="#DC3545" Foreground="White"/>
         </StackPanel>
     </Grid>
 </Window>

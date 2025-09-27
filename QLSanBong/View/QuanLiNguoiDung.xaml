@@ -41,6 +41,11 @@
                 <Button Content="Sửa" Width="60" Margin="5 0" Command="{Binding SuaCommand}"/>
                 <Button Content="Xóa" Width="60" Margin="5 0" Command="{Binding XoaCommand}"/>
             </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" Margin="15 10 0 0" HorizontalAlignment="Center">
+                <Button Content="Quay về" Width="80" Margin="5 0" Click="btnQuayVe_Click" Background="LightGray"/>
+                <Button Content="Đăng xuất" Width="80" Margin="5 0" Click="btnDangXuat_Click" Background="#DC3545" Foreground="White"/>
+            </StackPanel>
         </StackPanel>
 
         <!-- Danh sách người dùng -->

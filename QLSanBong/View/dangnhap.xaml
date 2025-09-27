@@ -5,39 +5,62 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="clr-namespace:QLSanBong.ViewModel"
         mc:Ignorable="d"
-        Title="Đăng nhập / Đăng ký" Height="500" Width="800">
+        Title="Đăng nhập" Height="500" Width="800">
 
     <Window.DataContext>
         <vm:DangNhapViewModel/>
     </Window.DataContext>
 
-    <Grid Margin="20">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+    <Grid Background="#F0F0F0">
+        <Border Background="White" CornerRadius="12" Padding="25" 
+                Width="400" 
+                HorizontalAlignment="Center" VerticalAlignment="Center"
+                BorderBrush="#DDD" BorderThickness="1" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
 
-        <TextBlock Text="ĐĂNG NHẬP" FontSize="24" FontWeight="Bold"
-                   HorizontalAlignment="Center" Margin="0 0 0 20"/>
+                <!-- Tiêu đề -->
+                <TextBlock Text="ĐĂNG NHẬP" FontSize="24" FontWeight="Bold"
+                           HorizontalAlignment="Center" Margin="0 0 0 20"/>
 
-        <StackPanel Grid.Row="1" Margin="20">
-            <StackPanel Orientation="Horizontal" Margin="0 5">
-                <TextBlock Text="Tên đăng nhập:" Width="120"/>
-                <TextBox Text="{Binding TenDangNhap, UpdateSourceTrigger=PropertyChanged}" Width="200"/>
-            </StackPanel>
+                <!-- Nội dung -->
+                <StackPanel Grid.Row="1" Margin="10">
+                    <StackPanel Orientation="Horizontal" Margin="0 8">
+                        <TextBlock Text="Tên đăng nhập:" Width="120" VerticalAlignment="Center"/>
+                        <TextBox Text="{Binding TenDangNhap, UpdateSourceTrigger=PropertyChanged}" Width="200" Height="25"/>
+                    </StackPanel>
 
-            <StackPanel Orientation="Horizontal" Margin="0 5">
-                <TextBlock Text="Mật khẩu:" Width="120"/>
-                <PasswordBox x:Name="passwordBox" Width="200"/>
-            </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0 8">
+                        <TextBlock Text="Mật khẩu:" Width="120" VerticalAlignment="Center"/>
+                        <PasswordBox x:Name="passwordBox" Width="200" Height="25"/>
+                    </StackPanel>
 
-            <Button Content="Đăng nhập" Width="100" Margin="0 15 0 0"
-        HorizontalAlignment="Center"
-        Click="btnDangNhap_Click"/>
+                    <!-- Nút đăng nhập -->
+                    <Button Content="Đăng nhập" Width="120" Height="35" Margin="0 20 0 0"
+                            HorizontalAlignment="Center"
+                            Click="btnDangNhap_Click">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="#EEE" CornerRadius="8" Padding="8"
+                                        BorderBrush="#CCC" BorderThickness="1">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
 
-
-            <TextBlock Text="{Binding ThongBao}" Foreground="Red"
-                       HorizontalAlignment="Center" Margin="10 0 0 0"/>
-        </StackPanel>
+                    <!-- Thông báo -->
+                    <TextBlock Text="{Binding ThongBao}" Foreground="Red"
+                               HorizontalAlignment="Center" Margin="10 0 0 0" TextWrapping="Wrap"/>
+                    
+                    <!-- Debug info -->
+                    <TextBlock x:Name="debugInfo" Foreground="Blue" FontSize="10"
+                               HorizontalAlignment="Center" Margin="10 5 0 0" TextWrapping="Wrap"/>
+                </StackPanel>
+            </Grid>
+        </Border>
     </Grid>
 </Window>

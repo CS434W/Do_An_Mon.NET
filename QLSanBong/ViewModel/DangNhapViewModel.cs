@@ -81,19 +81,10 @@ namespace QLSanBong.ViewModel
                 return;
             }
 
-            // Mở cửa sổ theo quyền
-            if (account.VaiTro == "Admin")
-            {
-                CurrentUser.User = account;
-                var qlNguoiDung = new QuanLiNguoiDung();
-                qlNguoiDung.Show();
-            }
-            else
-            {
-                CurrentUser.User = account;
-                var mainWindow = new MainWindow();
-                mainWindow.Show();
-            }
+            // Mở MainWindow cho cả Admin và nhân viên
+            CurrentUser.User = account;
+            var mainWindow = new MainWindow();
+            mainWindow.Show();
 
             // Đóng cửa sổ đăng nhập
             Application.Current.Windows

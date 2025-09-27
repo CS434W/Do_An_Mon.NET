@@ -1,0 +1,193 @@
+<Window x:Class="QLSanBong.View.QuanLyThanhToan"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Quản lý Thanh toán" Height="600" Width="900"
+        Loaded="Window_Loaded">
+
+    <Grid>
+        <TabControl x:Name="TabControl" SelectionChanged="TabControl_SelectionChanged">
+            <TabItem Header="Ghi nhận thanh toán">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="87*"/>
+                        <ColumnDefinition Width="310*"/>
+                    </Grid.ColumnDefinitions>
+                    <GroupBox Header="Thông tin thanh toán" Grid.ColumnSpan="2">
+                        <Grid Margin="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Label Content="Mã thanh toán:" Grid.Row="0" Grid.Column="0" Margin="5"/>
+                            <TextBox x:Name="txt_MaTT" Grid.Row="0" Grid.Column="1" Margin="5"/>
+
+                            <Label Content="Mã đặt sân:" Grid.Row="0" Grid.Column="2" Margin="5"/>
+                            <ComboBox x:Name="cb_MaDat" Grid.Row="0" Grid.Column="3" Margin="5" DisplayMemberPath="MaDatSan" SelectionChanged="cb_MaDat_SelectionChanged"/>
+
+                            <Label Content="Tên khách hàng:" Grid.Row="1" Grid.Column="0" Margin="5"/>
+                            <TextBox x:Name="txt_TenKH" Grid.Row="1" Grid.Column="1" Margin="5" IsReadOnly="True"/>
+
+                            <Label Content="Sân đã thuê:" Grid.Row="1" Grid.Column="2" Margin="5"/>
+                            <TextBox x:Name="txt_San" Grid.Row="1" Grid.Column="3" Margin="5" IsReadOnly="True"/>
+
+                            <Label Content="Thời gian bắt đầu:" Grid.Row="2" Grid.Column="0" Margin="5"/>
+                            <TextBox x:Name="txt_ThoiGianBatDau" Grid.Row="2" Grid.Column="1" Margin="5" IsReadOnly="True"/>
+
+                            <Label Content="Thời gian kết thúc:" Grid.Row="2" Grid.Column="2" Margin="5"/>
+                            <TextBox x:Name="txt_ThoiGianKetThuc" Grid.Row="2" Grid.Column="3" Margin="5" IsReadOnly="True"/>
+
+                            <Label Content="Số giờ thuê:" Grid.Row="3" Grid.Column="0" Margin="5"/>
+                            <TextBox x:Name="txt_SoGioThue" Grid.Row="3" Grid.Column="1" Margin="5" IsReadOnly="True" />
+
+                            <Label Content="Đơn giá:" Grid.Row="3" Grid.Column="2" Margin="5"/>
+                            <TextBox x:Name="txt_DonGia" Grid.Row="3" Grid.Column="3" Margin="5" IsReadOnly="True"/>
+
+                            <Label Content="Thành tiền:" Grid.Row="4" Grid.Column="0" Margin="5"/>
+                            <TextBox x:Name="txt_ThanhTien" Grid.Row="4" Grid.Column="1" Margin="5" IsReadOnly="True"/>
+
+                            <Label Content="Số tiền thanh toán:" Grid.Row="4" Grid.Column="2" Margin="5"/>
+                            <TextBox x:Name="txt_SoTien" Grid.Row="4" Grid.Column="3" Margin="5"/>
+
+                            <Label Content="Nhân viên thanh toán:" Grid.Row="5" Grid.Column="0" Margin="5"/>
+                            <ComboBox x:Name="cb_NhanVienThanhToan" Grid.Row="5" Grid.Column="1" Margin="5" DisplayMemberPath="TenNV" SelectedValuePath="MaNV"/>
+
+                            <Label Content="Ngày thanh toán:" Grid.Row="5" Grid.Column="2" Margin="5"/>
+                            <DatePicker x:Name="dp_NgayTT" Grid.Row="5" Grid.Column="3" Margin="5"/>
+
+                            <Label Content="Ghi chú:" Grid.Row="6" Grid.Column="0" Margin="5"/>
+                            <TextBox x:Name="txt_GhiChu" Grid.Row="6" Grid.Column="1" Margin="5" Grid.ColumnSpan="3" Height="60" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"/>
+
+                            <WrapPanel Margin="5" Grid.Row="7" Grid.ColumnSpan="4" HorizontalAlignment="Center">
+                                <Button Content="Quay về Trang chủ" Width="120" Margin="5" Click="BtnQuayVe_Click"/>
+                                <Button Content="Tạo mới" Width="100" Margin="5" Click="btn_TaoMoi_Click" Background="LightBlue"/>
+                                <Button Content="Thanh toán" Width="100" Margin="5" Click="btn_Luu_Click" Background="LightGreen"/>
+                                <Button Content="Xóa" Width="100" Margin="5" Click="btn_Xoa_Click" Background="LightCoral"/>
+                                <Button Content="Đăng xuất" Width="100" Margin="5" Click="btnDangXuat_Click" Background="#DC3545" Foreground="White"/>
+                            </WrapPanel>
+
+                            <DataGrid x:Name="dg_DanhSachThanhToan" Margin="5" Grid.Row="8" Grid.ColumnSpan="4" 
+          AutoGenerateColumns="False" Height="200" SelectionChanged="dg_DanhSachThanhToan_SelectionChanged"
+          CanUserAddRows="False" CanUserDeleteRows="False"
+          HorizontalScrollBarVisibility="Auto">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Mã Thanh Toán" Binding="{Binding MaTT}" Width="120"/>
+                                    <DataGridTextColumn Header="Tên Khách Hàng" Binding="{Binding TenKH}" Width="120"/>
+                                    <DataGridTextColumn Header="Tên Sân" Binding="{Binding TenSan}" Width="100"/>
+                                    <DataGridTextColumn Header="Số Tiền" Binding="{Binding SoTien, StringFormat='{}{0:N0}'}" Width="80"/>
+                                    <DataGridTextColumn Header="Ngày Thanh Toán" Binding="{Binding NgayTT, StringFormat='dd/MM/yyyy'}" Width="120"/>
+                                    <DataGridTextColumn Header="Nhân Viên Thanh Toán" Binding="{Binding TenNV}" Width="140"/>
+                                    <DataGridTextColumn Header="Ghi Chú" Binding="{Binding GhiChu}" Width="150"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Theo dõi công nợ">
+                <Grid>
+                    <GroupBox Header="Danh sách công nợ">
+                        <Grid Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <WrapPanel Grid.Row="0" HorizontalAlignment="Center" Margin="5">
+                                <Label Content="Tìm kiếm khách hàng:" Margin="5" VerticalAlignment="Center"/>
+                                <TextBox x:Name="txt_TimKiemKH" Width="200" Margin="5" Height="25"/>
+                                <Button Content="Tìm kiếm" Width="80" Margin="5" Click="btn_TimKiemCongNo_Click" Background="LightBlue"/>
+                                <Button Content="Làm mới" Width="80" Margin="5" Click="btn_LamMoiCongNo_Click" Background="LightGray"/>
+                            </WrapPanel>
+
+                            <DataGrid x:Name="dg_CongNo" Grid.Row="1" Margin="20" AutoGenerateColumns="False"
+          CanUserAddRows="False" CanUserDeleteRows="False"
+          SelectionChanged="dg_CongNo_SelectionChanged"
+          HorizontalScrollBarVisibility="Hidden">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Mã Khách Hàng" Binding="{Binding MaKH}" Width="160"/>
+                                    <DataGridTextColumn Header="Tên Khách Hàng" Binding="{Binding TenKH}" Width="160"/>
+                                    <DataGridTextColumn Header="Số Điện Thoại" Binding="{Binding SDT}" Width="160"/>
+                                    <DataGridTextColumn Header="Tổng Công Nợ" Binding="{Binding TongCongNo, StringFormat='{}{0:N0}'}" Width="160"/>
+                                    <DataGridTextColumn Header="Số Lần Đặt Nợ" Binding="{Binding SoLanDatNo}" Width="160"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+
+                            <TextBlock Grid.Row="2" HorizontalAlignment="Center" Margin="5" Foreground="Blue"
+                                   Text="* Danh sách khách hàng có công nợ chưa thanh toán"/>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Báo cáo doanh thu">
+                <Grid>
+                    <GroupBox Header="Báo cáo doanh thu">
+                        <Grid Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                                <Label Content="Từ ngày:" Margin="5" VerticalAlignment="Center"/>
+                                <DatePicker x:Name="dp_TuNgay" Width="120" Margin="5" Height="25"/>
+                                <Label Content="Đến ngày:" Margin="5" VerticalAlignment="Center"/>
+                                <DatePicker x:Name="dp_DenNgay" Width="120" Margin="5" Height="25"/>
+                                <Button Content="Xem báo cáo" Width="100" Margin="5" Click="btn_XemBaoCao_Click" Background="LightBlue"/>
+                            </StackPanel>
+
+                            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                                <Label Content="Tổng doanh thu:" FontWeight="Bold" Margin="5" VerticalAlignment="Center"/>
+                                <Label x:Name="lbl_TongDoanhThu" Content="0" FontWeight="Bold" Foreground="Blue" Margin="5" VerticalAlignment="Center"/>
+                                <Label Content="VND" FontWeight="Bold" Margin="5" VerticalAlignment="Center"/>
+
+                                <Label Content="Tổng công nợ:" FontWeight="Bold" Margin="5" VerticalAlignment="Center"/>
+                                <Label x:Name="lbl_TongCongNo" Content="0" FontWeight="Bold" Foreground="Red" Margin="5" VerticalAlignment="Center"/>
+                                <Label Content="VND" FontWeight="Bold" Margin="5" VerticalAlignment="Center"/>
+                            </StackPanel>
+
+                            <DataGrid x:Name="dg_BaoCao" Grid.Row="2" Margin="20" AutoGenerateColumns="False"
+          CanUserAddRows="False" CanUserDeleteRows="False"
+          HorizontalScrollBarVisibility="Auto">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Ngày Thanh Toán" Binding="{Binding Ngay}" Width="160"/>
+                                    <DataGridTextColumn Header="Số Lượng Thanh Toán" Binding="{Binding SoLuongTT}" Width="160"/>
+                                    <DataGridTextColumn Header="Tổng Doanh Thu" Binding="{Binding DoanhThu, StringFormat='{}{0:N0}'}" Width="160"/>
+                                    <DataGridTextColumn Header="Số Công Nợ" Binding="{Binding SoCongNo}" Width="160"/>
+                                    <DataGridTextColumn Header="Tỷ Lệ Công Nợ" Binding="{Binding TyLeCongNo}" Width="160"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+
+                            <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                                <TextBlock Text="* Báo cáo thống kê doanh thu và công nợ theo ngày" 
+                                       Foreground="Green" FontStyle="Italic"/>
+                            </StackPanel>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

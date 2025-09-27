@@ -129,6 +129,7 @@
     <Compile Include="ViewModel\MainWindowViewModel .cs" />
     <Compile Include="ViewModel\QuanLiNguoiDungViewModel.cs" />
     <Compile Include="ViewModel\QlySanBongViewModel.cs" />
+    <Compile Include="ViewModel\QuanLyThanhToanViewModel.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
     <!-- Views -->
     <Compile Include="View\dangnhap.xaml.cs">
@@ -145,6 +146,9 @@
     </Compile>
     <Compile Include="View\QuanLySanBong.xaml.cs">
       <DependentUpon>QuanLySanBong.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\QuanLyThanhToan.xaml.cs">
+      <DependentUpon>QuanLyThanhToan.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -167,6 +171,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="View\QuanLySanBong.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\QuanLyThanhToan.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
