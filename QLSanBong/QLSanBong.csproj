@@ -130,6 +130,7 @@
     <Compile Include="ViewModel\QuanLiNguoiDungViewModel.cs" />
     <Compile Include="ViewModel\QlySanBongViewModel.cs" />
     <Compile Include="ViewModel\QuanLyThanhToanViewModel.cs" />
+    <Compile Include="ViewModel\QuanLyThietBiVaBaoTriViewModel.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
     <!-- Views -->
     <Compile Include="View\dangnhap.xaml.cs">
@@ -153,6 +154,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="View\QuanLyThietBiVaBaoTri.xaml.cs">
+      <DependentUpon>QuanLyThietBiVaBaoTri.xaml</DependentUpon>
     </Compile>
     <Page Include="View\dangnhap.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -179,6 +183,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
+    <Page Include="View\QuanLyThietBiVaBaoTri.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <!-- Properties -->
   <ItemGroup>
@@ -245,7 +253,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-<ItemGroup>
+  <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>

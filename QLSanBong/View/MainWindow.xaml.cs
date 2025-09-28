@@ -215,8 +215,8 @@ namespace QLSanBong.View
 
             if (button.Name == "btnThietBi")
             {
-                MessageBox.Show("Chức năng quản lý thiết bị đang phát triển", "Thông báo", 
-                    MessageBoxButton.OK, MessageBoxImage.Information);
+                var qltb = new QuanLyThietBiVaBaoTri();
+                qltb.Show();
                 return;
             }
 
