@@ -1,0 +1,215 @@
+﻿<Window x:Class="QLSanBong.View.DatSanWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Đặt Sân" Height="450" Width="800" Loaded="Window_Loaded_1">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Đặt sân mới">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Thông tin đặt sân -->
+                    <GroupBox Header="Thông tin đặt sân" Grid.Column="0" Margin="15">
+                        <Grid Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Thông tin khách hàng -->
+                            <Label Content="Thông tin khách hàng:" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" 
+                                   FontWeight="Bold" Foreground="Blue" Margin="5"/>
+
+                            <Label Content="Mã KH:" Grid.Row="1" Grid.Column="0" Margin="5"/>
+                            <TextBox x:Name="txt_MaKH" Grid.Row="1" Grid.Column="1" Margin="5" IsReadOnly="True" Background="LightGray"/>
+
+                            <Label Content="Tên KH (*):" Grid.Row="1" Grid.Column="2" Margin="5"/>
+                            <TextBox x:Name="txt_TenKH" Grid.Row="1" Grid.Column="3" Margin="5" Tag="Required"/>
+
+                            <Label Content="SĐT (*):" Grid.Row="2" Grid.Column="0" Margin="5"/>
+                            <TextBox x:Name="txt_SDT" Grid.Row="2" Grid.Column="1" Margin="5" Tag="Required"/>
+
+                            <Label Content="Ghi chú:" Grid.Row="2" Grid.Column="2" Margin="5"/>
+                            <TextBox x:Name="txt_GhiChuKH" Grid.Row="2" Grid.Column="3" Margin="5"/>
+
+                            <!-- Thông tin đặt sân -->
+                            <Label Content="Thông tin đặt sân:" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" 
+                                   FontWeight="Bold" Foreground="Blue" Margin="5"/>
+
+                            <Label Content="Mã đặt sân:" Grid.Row="4" Grid.Column="0" Margin="5"/>
+                            <TextBox x:Name="txt_MaDatSan" Grid.Row="4" Grid.Column="1" Margin="5" IsReadOnly="True" Background="LightGray"/>
+
+                            <Label Content="Sân (*):" Grid.Row="4" Grid.Column="2" Margin="5"/>
+                            <ComboBox x:Name="cb_San" Grid.Row="4" Grid.Column="3" Margin="5" DisplayMemberPath="TenSan" SelectedValuePath="MaSan" SelectionChanged="cb_San_SelectionChanged"/>
+
+                            <Label Content="Ngày đặt (*):" Grid.Row="5" Grid.Column="0" Margin="5"/>
+                            <DatePicker x:Name="dp_NgayDat" Grid.Row="5" Grid.Column="1" Margin="5" SelectedDateChanged="dp_NgayDat_SelectedDateChanged"/>
+
+                            <Label Content="Giờ bắt đầu (*):" Grid.Row="5" Grid.Column="2" Margin="5"/>
+                            <ComboBox x:Name="cb_GioBatDau" Grid.Row="5" Grid.Column="3" Margin="5" SelectionChanged="cb_GioBatDau_SelectionChanged">
+                                <ComboBoxItem Content="06:00"/>
+                                <ComboBoxItem Content="07:00"/>
+                                <ComboBoxItem Content="08:00"/>
+                                <ComboBoxItem Content="09:00"/>
+                                <ComboBoxItem Content="10:00"/>
+                                <ComboBoxItem Content="11:00"/>
+                                <ComboBoxItem Content="12:00"/>
+                                <ComboBoxItem Content="13:00"/>
+                                <ComboBoxItem Content="14:00"/>
+                                <ComboBoxItem Content="15:00"/>
+                                <ComboBoxItem Content="16:00"/>
+                                <ComboBoxItem Content="17:00"/>
+                                <ComboBoxItem Content="18:00"/>
+                                <ComboBoxItem Content="19:00"/>
+                                <ComboBoxItem Content="20:00"/>
+                                <ComboBoxItem Content="21:00"/>
+                                <ComboBoxItem Content="22:00"/>
+                            </ComboBox>
+
+                            <Label Content="Giờ kết thúc (*):" Grid.Row="6" Grid.Column="0" Margin="5"/>
+                            <ComboBox x:Name="cb_GioKetThuc" Grid.Row="6" Grid.Column="1" Margin="5" SelectionChanged="cb_GioKetThuc_SelectionChanged">
+                                <ComboBoxItem Content="07:00"/>
+                                <ComboBoxItem Content="08:00"/>
+                                <ComboBoxItem Content="09:00"/>
+                                <ComboBoxItem Content="10:00"/>
+                                <ComboBoxItem Content="11:00"/>
+                                <ComboBoxItem Content="12:00"/>
+                                <ComboBoxItem Content="13:00"/>
+                                <ComboBoxItem Content="14:00"/>
+                                <ComboBoxItem Content="15:00"/>
+                                <ComboBoxItem Content="16:00"/>
+                                <ComboBoxItem Content="17:00"/>
+                                <ComboBoxItem Content="18:00"/>
+                                <ComboBoxItem Content="19:00"/>
+                                <ComboBoxItem Content="20:00"/>
+                                <ComboBoxItem Content="21:00"/>
+                                <ComboBoxItem Content="22:00"/>
+                                <ComboBoxItem Content="23:00"/>
+                            </ComboBox>
+
+                            <Label Content="Đơn giá:" Grid.Row="6" Grid.Column="2" Margin="5"/>
+                            <TextBox x:Name="txt_DonGia" Grid.Row="6" Grid.Column="3" Margin="5" IsReadOnly="True" Background="LightGray"/>
+
+                            <Label Content="Thành tiền:" Grid.Row="7" Grid.Column="0" Margin="5"/>
+                            <TextBox x:Name="txt_ThanhTien" Grid.Row="7" Grid.Column="1" Margin="5" IsReadOnly="True" Background="LightGray" FontWeight="Bold" Foreground="Red"/>
+
+                            <Label Content="Nhân viên:" Grid.Row="7" Grid.Column="2" Margin="5"/>
+                            <ComboBox x:Name="cb_NhanVien" Grid.Row="7" Grid.Column="3" Margin="5" DisplayMemberPath="TenNV" SelectedValuePath="MaNV"/>
+
+                            <!-- Nút điều khiển -->
+                            <WrapPanel Grid.Row="8" Grid.ColumnSpan="4" HorizontalAlignment="Center"  Margin="10 30 10 0">
+                                <Button Content="Kiểm tra sân trống" Width="120" Margin="5" Click="btn_KiemTraSanTrong_Click" Background="LightBlue"/>
+                                <Button Content="Tạo mới" Width="100" Margin="5" Click="btn_TaoMoi_Click" Background="LightYellow"/>
+                                <Button Content="Đặt sân" Width="100" Margin="5" Click="btn_DatSan_Click" Background="LightGreen"/>
+                                <Button Content="Hủy đặt" Width="100" Margin="5" Click="btn_HuyDat_Click" Background="LightCoral"/>
+                                <Button Content="Quay về" Width="100" Margin="5" Click="btn_QuayVe_Click"/>
+                            </WrapPanel>
+
+                            <!-- Thông báo -->
+                            <TextBlock x:Name="tb_ThongBao" Grid.Row="9" Grid.ColumnSpan="4" Margin="5" TextWrapping="Wrap" 
+                                       FontWeight="Bold" HorizontalAlignment="Center"/>
+                        </Grid>
+                    </GroupBox>
+
+                    <!-- Lịch sân trong ngày -->
+                    <GroupBox Header="Lịch sân trong ngày đã đặt" Grid.Column="1" Margin="10">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="5">
+                                <Label Content="Ngày xem:" Margin="5"/>
+                                <DatePicker x:Name="dp_NgayXem" Width="120" Margin="5" SelectedDateChanged="dp_NgayXem_SelectedDateChanged"/>
+                                <Button x:Name="btn_XemLich" Content="Xem" Width="60" Margin="5" Click="btn_XemLich_Click" Background="LightBlue"/>
+                            </StackPanel>
+
+                            <DataGrid x:Name="dg_LichSan" Grid.Row="1" Margin="5" AutoGenerateColumns="False"
+                                      CanUserAddRows="False" CanUserDeleteRows="False" SelectionChanged="dg_LichSan_SelectionChanged">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Giờ Bắt đầu" Binding="{Binding ThoiGianBatDau}" Width="80"/>
+                                    <DataGridTextColumn Header="Giờ kết thúc" Binding="{Binding ThoiGianKetThuc}" Width="80"/>
+                                    <DataGridTextColumn Header="Tên Sân" Binding="{Binding TenSan}" Width="80"/>
+                                    <DataGridTextColumn Header="Loại Sân" Binding="{Binding LoaiSan}" Width="80"/>
+                                    <DataGridTextColumn Header="Giá Sân" Binding="{Binding DonGia, StringFormat='{}{0:N0}'}" Width="80"/>
+                                    <DataGridTextColumn Header="Tình Trạng" Binding="{Binding TinhTrang}" Width="80"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Danh sách đặt sân">
+                <Grid>
+                    <GroupBox Header="Danh sách đặt sân" Margin="15">
+                        <Grid Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <!-- Thanh tìm kiếm -->
+                            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="5">
+                                <Label Content="Tìm kiếm:" Margin="5"/>
+                                <TextBox x:Name="txt_TimKiem" Width="200" Margin="5" TextChanged="txt_TimKiem_TextChanged"/>
+                                <ComboBox x:Name="cb_LoaiTimKiem" Width="120" Margin="5" SelectedIndex="0">
+                                    <ComboBoxItem Content="Theo tên KH"/>
+                                    <ComboBoxItem Content="Theo sân"/>
+                                    <ComboBoxItem Content="Theo ngày"/>
+                                </ComboBox>
+                                <Button Content="Làm mới" Width="80" Margin="5" Click="btn_LamMoi_Click" Background="LightGray"/>
+                                <Button Content="Hủy đặt" Width="80" Margin="5" Click="btn_HuyDatTrongDanhSach_Click" Background="LightCoral"/>
+                            </StackPanel>
+
+                            <!-- DataGrid -->
+                            <DataGrid x:Name="dg_DanhSachDatSan" Grid.Row="1" Margin="5" AutoGenerateColumns="False"
+                                      CanUserAddRows="False" CanUserDeleteRows="False" SelectionChanged="dg_DanhSachDatSan_SelectionChanged">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Mã đặt" Binding="{Binding MaDatSan}" Width="80"/>
+                                    <DataGridTextColumn Header="Tên KH" Binding="{Binding TenKH}" Width="120"/>
+                                    <DataGridTextColumn Header="SĐT" Binding="{Binding SDT}" Width="100"/>
+                                    <DataGridTextColumn Header="Sân" Binding="{Binding TenSan}" Width="80"/>
+                                    <DataGridTextColumn Header="Ngày đặt" Binding="{Binding NgayDat, StringFormat='dd/MM/yyyy'}" Width="100"/>
+                                    <DataGridTextColumn Header="Giờ bắt đầu" Binding="{Binding GioBatDau}" Width="100"/>
+                                    <DataGridTextColumn Header="Giờ kết thúc" Binding="{Binding GioKetThuc}" Width="100"/>
+                                    <DataGridTextColumn Header="Trạng thái" Binding="{Binding TinhTrangText}" Width="80"/>
+                                    <DataGridTextColumn Header="Nhân viên" Binding="{Binding TenNV}" Width="100"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+
+                            <!-- Thống kê -->
+                            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                                <TextBlock Text="Tổng số đặt sân:" Margin="5"/>
+                                <TextBlock x:Name="tb_TongSo" FontWeight="Bold" Margin="5" Foreground="Blue"/>
+                                <TextBlock Text="Đang hoạt động:" Margin="5"/>
+                                <TextBlock x:Name="tb_DangHoatDong" FontWeight="Bold" Margin="5" Foreground="Green"/>
+                                <TextBlock Text="Đã hủy:" Margin="5"/>
+                                <TextBlock x:Name="tb_DaHuy" FontWeight="Bold" Margin="5" Foreground="Red"/>
+                            </StackPanel>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+
+</Window>

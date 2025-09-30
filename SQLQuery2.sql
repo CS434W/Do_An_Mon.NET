@@ -1,0 +1,1 @@
+﻿SELECT * FROM LICH_DAT_SAN WHERE MaKH = 'Mã_KHách_Hàng_Cụ_Thể'
